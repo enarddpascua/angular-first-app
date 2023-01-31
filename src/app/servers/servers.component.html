@@ -14,3 +14,13 @@ class="form-control"
 />
 <p [innerText]="username"></p>
 <button class="btn btn-primary" [disabled]="username == ''" (click)="onResetUsername()">Reset username</button>
+<hr>
+<p>Assignement : Directives</p>
+<button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
+<p *ngIf="displayDetails">Secret Password = tuna</p>
+<p *ngFor="let i of numOfClicks
+let indexOfElement = index;"
+[ngStyle]="{backgroundColor: indexOfElement > 5 && 'blue'}" 
+[ngClass]="{moreThanFive: indexOfElement > 5}">
+{{indexOfElement}}
+</p>

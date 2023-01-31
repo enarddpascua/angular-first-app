@@ -12,6 +12,8 @@ export class ServersComponent {
   username='';
   serverAllowAdd :boolean = false;
   servers = ['Testserver', 'Testserver 2'];
+  displayDetails :boolean = false;
+  numOfClicks :number[]= [];
   
   constructor(){
     setTimeout(() => {
@@ -33,5 +35,9 @@ export class ServersComponent {
     this.username= '';
   }
 
+  onDisplayDetails(){
+    this.numOfClicks.push(0);
+    this.displayDetails = !this.displayDetails;
+  }
 
 }
