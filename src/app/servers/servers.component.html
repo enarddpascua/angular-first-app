@@ -1,2 +1,16 @@
-<!-- <app-server></app-server>
-<app-server></app-server> -->
+<input class="form-control" [(ngModel)]="serverUpdate"/>
+<p>{{serverUpdate}}</p>
+<button 
+class="btn btn-primary" 
+[disabled]="!allowNewServer"
+(click)="onCreateServer()"
+>Add new server</button>
+<p>{{serverAddStatus}}</p>
+<app-server></app-server>
+<p>Assignment: Data binding</p>
+<input 
+class="form-control"
+[(ngModel)]="username"
+/>
+<p [innerText]="username"></p>
+<button class="btn btn-primary" [disabled]="username == ''" (click)="onResetUsername()">Reset username</button>
