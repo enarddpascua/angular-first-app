@@ -5,8 +5,8 @@ class="btn btn-primary"
 [disabled]="!allowNewServer"
 (click)="onCreateServer()"
 >Add new server</button>
-<p>{{serverAddStatus}}</p>
-<app-server></app-server>
+<p *ngIf="serverAllowAdd">New server was created. The name is {{serverUpdate}}</p>
+<app-server *ngFor="let server of servers"></app-server>
 <p>Assignment: Data binding</p>
 <input 
 class="form-control"

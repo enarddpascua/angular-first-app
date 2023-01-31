@@ -10,6 +10,8 @@ export class ServersComponent {
   serverUpdate = 'testServer';
   serverAddStatus = "no server has added yet.";
   username='';
+  serverAllowAdd :boolean = false;
+  servers = ['Testserver', 'Testserver 2'];
   
   constructor(){
     setTimeout(() => {
@@ -18,6 +20,8 @@ export class ServersComponent {
   }
 
   onCreateServer(){
+    this.serverAllowAdd =true;
+    this.servers.push("new server");
     this.serverAddStatus = "new server was added " + this.serverUpdate;
   }
 
